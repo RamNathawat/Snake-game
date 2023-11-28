@@ -2,7 +2,7 @@ const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
-let bgmusic= new Audio("./mixkit-arcade-retro-background-219.wav")
+let foodmusic= new Audio("./mixkit-arcade-mechanical-bling-210.wav")
 let gameOver = false;
 let foodX, foodY;
 let snakeX = 5, snakeY = 5;
@@ -10,6 +10,8 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let score = 0;
+var musicButton = document.getElementById('music-button');
+var myAudio = document.getElementById('myAudio');
 
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
@@ -58,6 +60,7 @@ const initGame = () => {
     localStorage.setItem("high-score", highScore);
     scoreElement.innerText = `Score: ${score}`;
     highScoreElement.innerText = `High Score: ${highScore}`;
+    foodmusic.play();
   }
   snakeX += velocityX;
   snakeY += velocityY;
@@ -81,10 +84,14 @@ const initGame = () => {
     }
   }
   playBoard.innerHTML = html;
-bgmusic.play();
-
-bgmusic.loop=true;
+  musicButton.addEventListener('click', function () {
+  if (myAudio.paused) {
+      myAudio.play();
+  }else{
+      myAudio.pause();
+  }});
 };
+
 
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);

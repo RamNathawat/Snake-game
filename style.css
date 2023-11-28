@@ -93,8 +93,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-
+button{
+  height: 30px;
+  width: 30px;
+}
+#music-button{
+  height: 30px;
+  width: 30px;
+}
 @media screen and (max-width: 800px) {
   .wrapper {
     width: 90vmin;
