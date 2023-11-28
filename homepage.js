@@ -12,3 +12,10 @@ if (myAudio.paused) {
 }else{
     myAudio.pause();
 }});
+
+var inputElement = document.getElementById("nicknameInput");
+var nickname = inputElement.value;
+if (nickname.trim() !== "") {
+    localStorage.setItem("userNickname", nickname);
+    alert("Nickname saved successfully!");
+}

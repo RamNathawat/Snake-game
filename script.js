@@ -10,8 +10,8 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let score = 0;
-var musicButton = document.getElementById('music-button');
-var myAudio = document.getElementById('myAudio');
+let musicButton = document.getElementById('music-button');
+let myAudio = document.getElementById('myAudio');
 
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
