@@ -2,7 +2,7 @@ const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
-
+let bgmusic= new Audio("./mixkit-arcade-retro-background-219.wav")
 let gameOver = false;
 let foodX, foodY;
 let snakeX = 5, snakeY = 5;
@@ -81,6 +81,9 @@ const initGame = () => {
     }
   }
   playBoard.innerHTML = html;
+bgmusic.play();
+
+bgmusic.loop=true;
 };
 
 updateFoodPosition();
