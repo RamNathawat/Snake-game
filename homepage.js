@@ -15,7 +15,10 @@ if (myAudio.paused) {
 
 var inputElement = document.getElementById("nicknameInput");
 var nickname = inputElement.value;
-if (nickname.trim() !== "") {
-    localStorage.setItem("userNickname", nickname);
-    alert("Nickname saved successfully!");
-}
+localStorage.setItem("userNickname", nickname);
+
+let instruction = document.getElementById("instructionbtn");
+instruction.addEventListener("click", function() {
+    alert("INSTRUCTION:- Press any Arrow key to start the game... \nGOOD LUCK!!!");
+});
+

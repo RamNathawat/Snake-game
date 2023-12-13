@@ -21,8 +21,10 @@
     justify-content: center;
     border-radius: 5px;
     background: #262626;
-    box-shadow: 0 20px 40px #262626;
+    box-shadow: 0 20px 40px
+    #262626;
     position: relative;
+    
   }
   
   .game-details {
@@ -129,4 +131,10 @@ input{
 #music-button{
   height: 30px;
   width: 30px;
+}
+#instruction{
+  border-radius: 5px;
+  background-color: greenyellow;
+  font-family: sans-serif;
+  font-size:20px;
 }

@@ -9,6 +9,4 @@ playbtn.addEventListener("click",function(){
 })
 
 var savedNickname = localStorage.getItem("userNickname");
-if (savedNickname) {
-    console.log(savedNickname);
-}
+console.log("hi",savedNickname);

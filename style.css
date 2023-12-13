@@ -54,8 +54,8 @@ body {
 }
 
 .food {
-  background-color: black; 
-  border: black;
+  background-color: white; 
+  border: white;
   animation: food 1.5s infinite;
 
 }
